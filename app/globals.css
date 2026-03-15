@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Fora base styles ── */
+:root {
+  --fora-indigo:   #34387F;
+  --fora-crimson:  #8C0A14;
+  --fora-olive:    #78742B;
+  --fora-cream:    #FAF8F3;
+  --fora-linen:    #F0EDE6;
+  --fora-sand:     #E4DFD4;
+  --fora-ink:      #1A1A1A;
+  --fora-stone:    #9A9690;
+}
+
+html, body {
+  background-color: #FAF8F3;
+  color: #1A1A1A;
+  font-family: 'Public Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Passport diagonal texture */
+.passport-texture {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 10px,
+    rgba(255,255,255,0.025) 10px,
+    rgba(255,255,255,0.025) 11px
+  );
+}
+
+/* Thin scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #D4CEC3; border-radius: 2px; }
+
+/* Date input styling */
+input[type="date"] {
+  color-scheme: light;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/* Range input */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 3px;
+  background: #E4DFD4;
+  border-radius: 2px;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #34387F;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 1px 4px rgba(52,56,127,0.3);
+}
+
+/* Smooth transitions */
+* { transition-property: background-color, border-color, color, opacity; transition-duration: 0.15s; }
